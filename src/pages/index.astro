@@ -3,45 +3,268 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Dr. Janner Robespier Sánchez Cuadras, Ginecólogo Oncólogo certificado en Culiacán, Sinaloa. Especialista en cáncer de mama, ovario, endometrio y cérvix. Consulta en Médica SR." />
-    <title>Dr. Janner Sánchez Cuadras | Ginecólogo Oncólogo en Culiacán</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dr. Janner Robespier Sánchez Cuadras, Ginecólogo Oncólogo certificado en Culiacán, Sinaloa. Especialista en cáncer de mama, ovario, endometrio y cérvix. Agenda tu consulta hoy." />
+    <meta name="keywords" content="ginecologo oncologo culiacan, ginecologo oncologo sinaloa, cancer de mama culiacan, cancer cervicouterino sinaloa, Dr Janner Sánchez, oncologia ginecologica mexico" />
+    <title>Dr. Janner Sánchez | Ginecólogo Oncólogo Culiacán, Sinaloa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Janner Robespier Sánchez Cuadras",
+      "description": "Médico especialista en Ginecología Oncológica. Certificado por el Consejo Mexicano de Ginecología y Obstetricia.",
+      "url": "https://drjanner.com",
+      "telephone": "+526675453333",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Río San Lorenzo 222-Ote",
+        "addressLocality": "Culiacán",
+        "addressRegion": "Sinaloa",
+        "addressCountry": "MX"
+      },
+      "medicalSpecialty": "Gynecology",
+      "openingHours": ["Mo-Fr 08:00-19:30", "Sa 08:00-13:30"]
+    }
+    </script><style>
+      :root {
+        --rosa: #c0395a;
+        --turquesa: #2a9d8f;
+        --blanco: #ffffff;
+        --gris-claro: #f8f9fa;
+        --gris-texto: #5a5a6a;
+        --oscuro: #1a1a2e;
+        --font-display: 'Playfair Display', serif;
+        --font-body: 'DM Sans', sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: var(--font-body); color: var(--oscuro); background: var(--blanco); overflow-x: hidden; }
+      nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1rem 2rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(192,57,90,0.1); display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+      .nav-logo { font-family: var(--font-display); font-size: 1.1rem; color: var(--oscuro); text-decoration: none; font-weight: 600; }
+      .nav-logo span { color: var(--rosa); }
+      .nav-links { display: flex; gap: 2rem; list-style: none; }
+      .nav-links a { text-decoration: none; color: var(--gris-texto); font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+      .nav-links a:hover { color: var(--rosa); }
+      .nav-cta { background: var(--rosa); color: white !important; padding: 0.6rem 1.4rem; border-radius: 50px; font-weight: 600 !important; }
+      .nav-cta:hover { background: #a02d4a !important; }
+      .hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding-top: 80px; background: linear-gradient(135deg, #fff5f7 0%, #f0fffe 100%); position: relative; overflow: hidden; }
+      .hero::before { content: ''; position: absolute; top: -100px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(192,57,90,0.06) 0%, transparent 70%); }
+      .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(42,157,143,0.08) 0%, transparent 70%); }
+      .hero-content { padding: 4rem 4rem 4rem 6rem; position: relative; z-index: 1; }
+      .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(42,157,143,0.1); border: 1px solid rgba(42,157,143,0.2); color: var(--turquesa); padding: 0.4rem 1rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      .hero-badge::before { content: '✓ '; }
+      .hero h1 { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.2; color: var(--oscuro); margin-bottom: 0.5rem; }
+      .hero h1 span { color: var(--rosa); }
+      .hero-especialidad { font-size: 1.1rem; color: var(--turquesa); font-weight: 600; margin-bottom: 1.5rem; }
+      .hero-desc { font-size: 1rem; color: var(--gris-texto); line-height: 1.8; margin-bottom: 2rem; max-width: 480px; }
+      .hero-credenciales { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2.5rem; }
+      .credencial { display: flex; align-items: center; gap: 0.6rem; font-size: 0.875rem; color: var(--gris-texto); font-weight: 500; }
+      .credencial-icon { width: 20px; height: 20px; background: var(--rosa); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.65rem; flex-shrink: 0; }
+      .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+      .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--rosa); color: white; padding: 0.9rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s; box-shadow: 0 4px 20px rgba(192,57,90,0.3); }
+      .btn-primary:hover { background: #a02d4a; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(192,57,90,0.4); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--turquesa); padding: 0.9rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; border: 2px solid var(--turquesa); transition: all 0.3s; }
+      .btn-secondary:hover { background: var(--turquesa); color: white; transform: translateY(-2px); }
+      .hero-imagen { position: relative; height: 100%; min-height: 600px; display: flex; align-items: flex-end; justify-content: center; padding: 2rem 4rem 0 2rem; }
+      .hero-imagen img { width: 100%; max-width: 500px; height: 580px; object-fit: cover; object-position: top center; border-radius: 30px 30px 0 0; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+      .hero-stats { position: absolute; bottom: 2rem; left: 1rem; background: white; border-radius: 16px; padding: 1rem 1.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.12); display: flex; gap: 1.5rem; }
+      .stat { text-align: center; }
+      .stat-num { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--rosa); }
+      .stat-label { font-size: 0.7rem; color: var(--gris-texto); font-weight: 500; }
+      .confianza { background: var(--oscuro); padding: 2rem 4rem; display: flex; justify-content: center; align-items: center; gap: 4rem; flex-wrap: wrap; }
+      .confianza-item { display: flex; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.85); font-size: 0.875rem; font-weight: 500; }
+      .servicios { padding: 6rem 4rem; background: var(--gris-claro); }
+      .section-header { text-align: center; margin-bottom: 4rem; }
+      .section-tag { display: inline-block; color: var(--rosa); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+      .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--oscuro); margin-bottom: 1rem; line-height: 1.3; }
+      .section-desc { color: var(--gris-texto); font-size: 1rem; max-width: 600px; margin: 0 auto; line-height: 1.7; }
+      .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+      .servicio-card { background: white; border-radius: 20px; padding: 2rem; transition: all 0.3s; border: 1px solid rgba(0,0,0,0.05); position: relative; overflow: hidden; }
+      .servicio-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, var(--rosa), var(--turquesa)); }
+      .servicio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+      .servicio-icon { font-size: 2rem; margin-bottom: 1rem; }
+      .servicio-title { font-family: var(--font-display); font-size: 1.1rem; color: var(--oscuro); margin-bottom: 0.75rem; font-weight: 600; }
+      .servicio-desc { font-size: 0.875rem; color: var(--gris-texto); line-height: 1.7; }
+      .sobre-mi { padding: 6rem 4rem; background: white; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; max-width: 1300px; margin: 0 auto; }
+      .sobre-imagen { position: relative; }
+      .sobre-imagen img { width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+      .sobre-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--rosa); color: white; padding: 1.5rem; border-radius: 16px; text-align: center; box-shadow: 0 10px 30px rgba(192,57,90,0.3); }
+      .sobre-badge-num { font-family: var(--font-display); font-size: 2rem; font-weight: 700; display: block; }
+      .sobre-badge-text { font-size: 0.75rem; opacity: 0.9; }
+      .sobre-content .section-header { text-align: left; margin-bottom: 1.5rem; }
+      .sobre-texto { color: var(--gris-texto); line-height: 1.8; margin-bottom: 1.5rem; font-size: 0.95rem; }
+      .formacion-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+      .formacion-item { display: flex; gap: 1rem; align-items: flex-start; }
+      .formacion-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--turquesa); margin-top: 6px; flex-shrink: 0; }
+      .formacion-texto strong { display: block; font-size: 0.9rem; color: var(--oscuro); font-weight: 600; }
+      .formacion-texto span { font-size: 0.8rem; color: var(--gris-texto); }
+      .cta-section { background: linear-gradient(135deg, var(--rosa) 0%, #8b1f3f 100%); padding: 5rem 4rem; text-align: center; position: relative; overflow: hidden; }
+      .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.5rem); color: white; margin-bottom: 1rem; position: relative; z-index: 1; }
+      .cta-section p { color: rgba(255,255,255,0.85); font-size: 1.05rem; margin-bottom: 2.5rem; max-width: 550px; margin-left: auto; margin-right: auto; line-height: 1.7; position: relative; z-index: 1; }
+      .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+      .btn-blanco { display: inline-flex; align-items: center; gap: 0.5rem; background: white; color: var(--rosa); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+      .btn-blanco:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+      .btn-outline-blanco { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1rem; border: 2px solid rgba(255,255,255,0.6); transition: all 0.3s; }
+      .btn-outline-blanco:hover { background: rgba(255,255,255,0.15); border-color: white; transform: translateY(-3px); }
+      .contacto { padding: 6rem 4rem; background: var(--gris-claro); }
+      .contacto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 1100px; margin: 0 auto; align-items: start; }
+      .contacto-item { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-start; }
+      .contacto-icono { width: 44px; height: 44px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.08); flex-shrink: 0; }
+      .contacto-dato strong { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gris-texto); margin-bottom: 0.25rem; font-weight: 600; }
+      .contacto-dato a, .contacto-dato p { color: var(--oscuro); text-decoration: none; font-size: 0.95rem; font-weight: 500; line-height: 1.5; }
+      .contacto-dato a:hover { color: var(--rosa); }
+      .horario-grid { background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+      .horario-title { font-family: var(--font-display); font-size: 1rem; color: var(--oscuro); margin-bottom: 1rem; font-weight: 600; }
+      .horario-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); font-size: 0.875rem; }
+      .horario-row:last-child { border-bottom: none; }
+      .horario-row span:first-child { color: var(--gris-texto); }
+      .horario-row span:last-child { color: var(--oscuro); font-weight: 500; }
+      .whatsapp-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+      .whatsapp-label { background: var(--oscuro); color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.75rem; font-weight: 600; opacity: 0; transform: translateX(10px); transition: all 0.3s; }
+      .whatsapp-float:hover .whatsapp-label { opacity: 1; transform: translateX(0); }
+      .whatsapp-btn { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); text-decoration: none; transition: all 0.3s; animation: pulse-wa 2s infinite; }
+      .whatsapp-btn:hover { transform: scale(1.1); }
+      .whatsapp-btn svg { width: 32px; height: 32px; fill: white; }
+      @keyframes pulse-wa { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 40px rgba(37,211,102,0.7); } }
+      footer { background: var(--oscuro); color: rgba(255,255,255,0.7); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+      .footer-logo { font-family: var(--font-display); font-size: 1.1rem; color: white; font-weight: 600; }
+      .footer-logo span { color: var(--rosa); }
+      footer p { font-size: 0.8rem; }
+      @media (max-width: 900px) {
+        .hero { grid-template-columns: 1fr; min-height: auto; }
+        .hero-content { padding: 3rem 1.5rem 2rem; order: 2; }
+        .hero-imagen { order: 1; min-height: 350px; padding: 1rem 1.5rem 0; }
+        .hero-imagen img { height: 350px; border-radius: 20px 20px 0 0; }
+        .nav-links { display: none; }
+        .sobre-mi { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+        .contacto-grid { grid-template-columns: 1fr; gap: 2rem; }
+        .confianza { gap: 1.5rem; padding: 2rem 1.5rem; }
+        .servicios, .contacto { padding: 4rem 1.5rem; }
+        .cta-section { padding: 4rem 1.5rem; }
+        footer { padding: 2rem 1.5rem; flex-direction: column; text-align: center; }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Dr. Janner Robespier Sánchez Cuadras</h1>
-      <p>Ginecólogo Oncólogo · Culiacán, Sinaloa</p>
-    </header>
-
-    <main>
-      <section>
-        <h2>Especialista en Ginecología Oncológica</h2>
-        <p>
-          Médico especialista en el diagnóstico, tratamiento y seguimiento de enfermedades 
-          oncológicas ginecológicas. Certificado por el Consejo Mexicano de Ginecología 
-          y Obstetricia, con formación en el Instituto Jalisciense de Cancerología 
-          y la Universidad de Guadalajara.
-        </p>
-      </section>
-
-      <section>
-        <h2>Servicios</h2>
-        <ul>
-          <li>Consulta de oncología ginecológica</li>
-          <li>Valoración y seguimiento de cáncer ginecológico</li>
-          <li>Segunda opinión oncológica</li>
-          <li>Cirugía de cáncer de mama</li>
-          <li>Cirugía de ovario, endometrio y cuello uterino</li>
-          <li>Cirugía de tumores ginecológicos</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Consulta</h2>
-        <p>📍 Médica SR — Río San Lorenzo 222-Ote, Guadalupe, Culiacán, Sinaloa</p>
-        <p>📞 667 545 3333</p>
-        <p>🕗 Lunes a Viernes 8:00 a.m. – 7:30 p.m. | Sábado 8:00 a.m. – 1:30 p.m.</p>
-      </section>
-    </main>
+    <nav>
+      <a href="/" class="nav-logo">Dr. <span>Janner</span> Sánchez</a>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Consultorio</a></li>
+        <li><a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="nav-cta" target="_blank">Agendar cita</a></li>
+      </ul>
+    </nav>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Certificado CMGO · Culiacán, Sinaloa</div>
+        <h1>Dr. Janner<br/><span>Robespier</span><br/>Sánchez Cuadras</h1>
+        <p class="hero-especialidad">Ginecólogo Oncólogo</p>
+        <p class="hero-desc">Especialista en el diagnóstico, tratamiento y seguimiento del cáncer ginecológico. Si tienes dudas o sospechas, el primer paso es una consulta — sin miedo, con información.</p>
+        <div class="hero-credenciales">
+          <div class="credencial"><div class="credencial-icon">✓</div>Certificado por el Consejo Mexicano de Ginecología y Obstetricia</div>
+          <div class="credencial"><div class="credencial-icon">✓</div>Especialista · Instituto Jalisciense de Cancerología</div>
+         </div>
+        <div class="hero-btns">
+          <a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="btn-primary" target="_blank">📱 Agendar por WhatsApp</a>
+          <a href="tel:+526675453333" class="btn-secondary">📞 667 545 3333</a>
+        </div>
+      </div>
+      <div class="hero-imagen">
+        <img src="/images/dr-janner-hero.png" alt="Dr. Janner Robespier Sánchez Cuadras - Ginecólogo Oncólogo Culiacán" />
+        <div class="hero-stats">
+          <div class="stat"><div class="stat-num">+8</div><div class="stat-label">Años de<br/>experiencia</div></div>
+           <div class="stat"><div class="stat-num">2</div><div class="stat-label">Especialidades<br/>certificadas</div></div>
+        </div>
+      </div>
+    </section>
+    <div class="confianza">
+      <div class="confianza-item"><span>🎓</span> Universidad de Guadalajara</div>
+      <div class="confianza-item"><span>🏥</span> Instituto Jalisciense de Cancerología</div>
+      <div class="confianza-item"><span>✅</span> Certificado CMGO 2022–2027</div>
+      <div class="confianza-item"><span>📍</span> Médica SR · Culiacán, Sinaloa</div>
+    </div>
+    <section class="servicios" id="servicios">
+      <div class="section-header">
+        <span class="section-tag">Especialidades</span>
+        <h2 class="section-title">¿En qué te puedo ayudar?</h2>
+        <p class="section-desc">Atiendo casos de cáncer ginecológico con un enfoque personalizado, orientado al diagnóstico oportuno y la mejor calidad de vida para la paciente.</p>
+      </div>
+      <div class="servicios-grid">
+        <div class="servicio-card"><div class="servicio-icon">🩺</div><h3 class="servicio-title">Consulta de Oncología Ginecológica</h3><p class="servicio-desc">Valoración especializada para detectar, diagnosticar y tratar enfermedades oncológicas ginecológicas. El primer paso siempre es una consulta.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">🎗️</div><h3 class="servicio-title">Cáncer de Mama</h3><p class="servicio-desc">Diagnóstico, tratamiento quirúrgico y seguimiento oncológico del cáncer de mama. Detección oportuna salva vidas.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">🔬</div><h3 class="servicio-title">Cáncer Cervicouterino</h3><p class="servicio-desc">Atención especializada en displasias, lesiones precancerosas y cáncer de cuello uterino con los más altos estándares médicos.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">⚕️</div><h3 class="servicio-title">Cáncer de Ovario y Endometrio</h3><p class="servicio-desc">Diagnóstico y cirugía oncológica especializada para cáncer de ovario, endometrio y tumores ginecológicos.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">💬</div><h3 class="servicio-title">Segunda Opinión Oncológica</h3><p class="servicio-desc">Si ya tienes un diagnóstico y quieres confirmarlo o explorar otras opciones, ofrezco valoración especializada con criterios médicos actualizados.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">📋</div><h3 class="servicio-title">Seguimiento Oncológico</h3><p class="servicio-desc">Acompañamiento continuo durante y después del tratamiento para garantizar los mejores resultados y calidad de vida.</p></div>
+      </div><div class="servicio-card"><div class="servicio-icon">🩻</div><h3 class="servicio-title">Colposcopía</h3><p class="servicio-desc">Estudio especializado para detectar lesiones premalignas y malignas en el cuello de la matriz. Diagnóstico oportuno que puede salvar vidas.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">🔬</div><h3 class="servicio-title">Biopsia Especializada</h3><p class="servicio-desc">Toma de biopsia de mama, endometrio y cuello de la matriz para diagnóstico preciso y certero de lesiones oncológicas.</p></div>
+        <div class="servicio-card"><div class="servicio-icon">🛡️</div><h3 class="servicio-title">Lesiones Premalignas</h3><p class="servicio-desc">Detección y tratamiento de lesiones premalignas del cuello de la matriz antes de que se conviertan en cáncer. La prevención es el mejor tratamiento.</p></div>
+    </section>
+    <section id="sobre-mi">
+      <div class="sobre-mi">
+        <div class="sobre-imagen">
+          <img src="/images/janner consultorio.png" alt="Dr. Janner Sánchez con equipo de ultrasonido" />
+          <div class="sobre-badge"><span class="sobre-badge-num">+8</span><span class="sobre-badge-text">años como<br/>especialista</span></div>
+        </div>
+        <div class="sobre-content">
+          <div class="section-header">
+            <span class="section-tag">Sobre mí</span>
+            <h2 class="section-title">Formación y experiencia a tu servicio</h2>
+          </div>
+          <p class="sobre-texto">Soy médico especialista en Ginecología Oncológica, originario de Sinaloa. Mi enfoque está centrado en la atención personalizada de cada paciente, con criterios médicos actualizados y un seguimiento cercano durante todo el proceso.</p>
+          <p class="sobre-texto">Creo firmemente que la detección oportuna y la información correcta son las herramientas más poderosas contra el cáncer ginecológico. Mi misión es que ninguna mujer enfrente este proceso sola y sin la mejor atención médica disponible en Sinaloa.</p>
+          <ul class="formacion-list">
+            <li class="formacion-item"><div class="formacion-dot"></div><div class="formacion-texto"><strong>Especialidad en Ginecología Oncológica</strong><span>Instituto Jalisciense de Cancerología · 2015–2018</span></div></li>
+            <li class="formacion-item"><div class="formacion-dot"></div><div class="formacion-texto"><strong>Especialidad en Ginecología y Obstetricia</strong><span>Universidad de Guadalajara · 2016</span></div></li>
+            <li class="formacion-item"><div class="formacion-dot"></div><div class="formacion-texto"><strong>Certificado por el CMGO</strong><span>Consejo Mexicano de Ginecología y Obstetricia · Vigente 2022–2027</span></div></li>
+          </ul>
+          <a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="btn-primary" target="_blank">Agendar mi consulta →</a>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section">
+      <h2>El primer paso es una consulta</h2>
+      <p>No esperes a tener síntomas severos. Si tienes dudas, antecedentes familiares o simplemente quieres una valoración preventiva, agenda hoy mismo.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="btn-blanco" target="_blank">💬 Escríbeme por WhatsApp</a>
+        <a href="tel:+526675453333" class="btn-outline-blanco">📞 Llamar al consultorio</a>
+      </div>
+    </section>
+    <section class="contacto" id="contacto">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Consultorio en Culiacán</h2>
+        <p class="section-desc">Atiendo en Médica SR, una de las clínicas más reconocidas de Culiacán, Sinaloa.</p>
+      </div>
+      <div class="contacto-grid">
+        <div class="contacto-info">
+          <div class="contacto-item"><div class="contacto-icono">📍</div><div class="contacto-dato"><strong>Dirección</strong><a href="https://maps.app.goo.gl/6S5W6gU6GfBJXttWA" target="_blank">Río San Lorenzo 222-Ote, Guadalupe,<br/>Culiacán, Sinaloa</a></div></div>
+          <div class="contacto-item"><div class="contacto-icono">📞</div><div class="contacto-dato"><strong>Teléfono</strong><a href="tel:+526675453333">667 545 3333</a></div></div>
+          <div class="contacto-item"><div class="contacto-icono">💬</div><div class="contacto-dato"><strong>WhatsApp</strong><a href="https://wa.me/526675453333" target="_blank">+52 667 545 3333</a></div></div>
+          <div class="horario-grid">
+            <p class="horario-title">Horario de atención</p>
+            <div class="horario-row"><span>Lunes a Viernes</span><span>8:00 a.m. – 7:30 p.m.</span></div>
+            <div class="horario-row"><span>Sábado</span><span>8:00 a.m. – 1:30 p.m.</span></div>
+            <div class="horario-row"><span>Domingo</span><span>Cerrado</span></div>
+          </div>
+        </div>
+        <div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.0236327214548!2d-107.39228162408467!3d24.794644277972314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcd1badfbdfb25%3A0x69c567c73d1ec0b1!2sMedica%20SR!5e0!3m2!1ses-419!2smx!4v1773465844429!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
+    </section>
+    <footer>
+      <div class="footer-logo">Dr. <span>Janner</span> Sánchez Cuadras</div>
+      <p>Ginecólogo Oncólogo · Culiacán, Sinaloa · © 2026</p>
+      <p>Certificado CMGO · Instituto Jalisciense de Cancerología</p>
+    </footer>
+    <div class="whatsapp-float">
+      <span class="whatsapp-label">¡Agenda tu cita!</span>
+      <a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="whatsapp-btn" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+    </div>
   </body>
 </html>
