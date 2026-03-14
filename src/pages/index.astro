@@ -129,6 +129,16 @@
       .whatsapp-btn:hover { transform: scale(1.1); }
       .whatsapp-btn svg { width: 32px; height: 32px; fill: white; }
       @keyframes pulse-wa { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 40px rgba(37,211,102,0.7); } }
+      .prensa { padding: 5rem 4rem; background: white; }
+.prensa-card { max-width: 900px; margin: 0 auto; background: var(--gris-claro); border-radius: 20px; padding: 2.5rem; display: flex; gap: 2rem; align-items: flex-start; border-left: 5px solid var(--rosa); box-shadow: 0 10px 40px rgba(0,0,0,0.06); }
+.prensa-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--rosa); background: white; padding: 1rem 1.5rem; border-radius: 12px; white-space: nowrap; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+.prensa-contenido { flex: 1; }
+.prensa-fecha { font-size: 0.8rem; color: var(--gris-texto); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.prensa-titulo { font-family: var(--font-display); font-size: 1.2rem; color: var(--oscuro); margin: 0.5rem 0 0.75rem; font-weight: 600; }
+.prensa-texto { font-size: 0.9rem; color: var(--gris-texto); line-height: 1.7; margin-bottom: 1rem; }
+.prensa-link { color: var(--rosa); font-weight: 600; text-decoration: none; font-size: 0.9rem; }
+.prensa-link:hover { text-decoration: underline; }
+@media (max-width: 900px) { .prensa { padding: 4rem 1.5rem; } .prensa-card { flex-direction: column; gap: 1rem; } }
       footer { background: var(--oscuro); color: rgba(255,255,255,0.7); padding: 3rem 4rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
       .footer-logo { font-family: var(--font-display); font-size: 1.1rem; color: white; font-weight: 600; }
       .footer-logo span { color: var(--rosa); }
@@ -225,7 +235,23 @@
           <a href="https://wa.me/526675453333?text=Hola%20Dr.%20Janner,%20quisiera%20agendar%20una%20consulta" class="btn-primary" target="_blank">Agendar mi consulta →</a>
         </div>
       </div>
-    </section>
+    </section><!-- PRENSA -->
+<section class="prensa">
+  <div class="section-header">
+    <span class="section-tag">Prensa y Medios</span>
+    <h2 class="section-title">Reconocido por los medios de Sinaloa</h2>
+    <p class="section-desc">El trabajo del Dr. Janner ha sido destacado por medios de comunicación regionales por su labor en la prevención y educación del cáncer ginecológico.</p>
+  </div>
+  <div class="prensa-card">
+    <div class="prensa-logo">EL DEBATE</div>
+    <div class="prensa-contenido">
+      <span class="prensa-fecha">Octubre 2019 · Angostura, Sinaloa</span>
+      <h3 class="prensa-titulo">Se capacitan sobre la prevención del cáncer de mama</h3>
+      <p class="prensa-texto">El Dr. Janner Robespier Sánchez Cuadras impartió una conferencia ante más de 100 personas en Angostura, Sinaloa, sobre detección oportuna del cáncer de mama, despejando dudas e invitando a la autoexploración constante.</p>
+      <a href="https://www.debate.com.mx/guamuchil/Se-capacitan-sobre-la-prevencion-del-cancer-de-mama-20191021-0263.html" target="_blank" class="prensa-link">Leer artículo completo →</a>
+    </div>
+  </div>
+</section>
     <section class="cta-section">
       <h2>El primer paso es una consulta</h2>
       <p>No esperes a tener síntomas severos. Si tienes dudas, antecedentes familiares o simplemente quieres una valoración preventiva, agenda hoy mismo.</p>
